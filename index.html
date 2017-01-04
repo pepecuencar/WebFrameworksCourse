@@ -65,8 +65,7 @@
                         </li>
                     </ul>
                      <ul class="nav navbar-nav navbar-right">
-                        <li><a data-toggle="modal" data-target="#loginModal">
-                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        <li><a id="login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
                     </li>
                 </ul>
                 </div>
@@ -90,8 +89,7 @@
                                 <input type="password" class="form-control-input-sm" id="password" placeholder="Password">
                             </div>
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">Remember me</label>
+                                <label><input type="checkbox">Remember me</label>
                             </div>
                             <button type="submit" class="btn btn-info btn-sm">Sign In</button>
                             <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
@@ -177,7 +175,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-2">
                         <p style="padding:40px;"></p>
-                         <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                         <a type="button" id="reserve" class="btn btn-warning btn-block">Reserve Table</a>
                     </div>
             </div>
         </div>
@@ -382,4 +380,18 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $("#reserve").click(function(){
+                $("#reserveModal").modal('show');
+                
+            });
+            
+            $("#login").click(function(){
+                $("#loginModal").modal('show');
+                
+            });
+        });
+    </script>
+    
 </html>
